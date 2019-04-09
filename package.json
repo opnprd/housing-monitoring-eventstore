@@ -9,6 +9,8 @@
   },
   "scripts": {
     "start": "node .",
-    "release:dev": "npm --no-git-tag-version version pre"
+    "release:dev": "npm --no-git-tag-version version pre",
+    "docker:setup": "node admin/dockerSetup",
+    "test:loaddata": "node test/fixtures/mongodb/setup.js"
   }
 }
