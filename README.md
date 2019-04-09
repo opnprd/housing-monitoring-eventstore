@@ -7,6 +7,8 @@ You'll need
 * a working version of Node (latest LTS version recommended). This is largely used to run the setup scripts.
 * a working version of Docker for your platform.
 
+To prepare the environment, run the command `npm install` from within the project directory structure. 
+
 ## Starting the services
 
 Starting the services
