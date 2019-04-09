@@ -12,8 +12,8 @@ server.use(restify.plugins.gzipResponse());
 server.get('/events', eventQuery);
 server.head('/events', eventQuery);
 
-server.get('/event/:id', getEvent);
-server.head('/event/:id', getEvent);
+server.get('/event/:urn', getEvent);
+server.head('/event/:urn', getEvent);
 
 server.listen(config.get('server.port'), function() {
   console.log('%s listening at %s', server.name, server.url);
