@@ -8,6 +8,9 @@ module.exports = {
   server: {
     port: 8000,
   },
+  logger: {
+    name: 'eventstore',
+  },
   mongodb: {
     host: 'localhost',
     port: 27017,
