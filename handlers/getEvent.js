@@ -1,21 +1,13 @@
-const mongodb = require('../services/mongo');
+const getEvent = require('../middleware/getEvent');
+const send = require('../middleware/send');
 
-async function getEvent(urn) {
-  await mongodb.connect();
-  const events = mongodb.db().collection('events');
-  const results = await events.findOne({ urn: urn }, { projection: { _id: 0 } });
-  return results;
-}
-
-async function eventQuery(req, res, next) {
-  let event;
-  try {
-    event = await getEvent(req.params.urn);
-  } catch(err) {
-    return next(err);
-  }
-  res.send(event);
+function eventProjetion(req, res, next) {
+  req.set('event.projection', { geometry: 0 });
   return next();
 }
 
-module.exports = eventQuery;
+module.exports = [
+  eventProjetion,
+  getEvent,
+  send('event'),
+];

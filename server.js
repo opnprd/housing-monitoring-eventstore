@@ -6,6 +6,8 @@ const server = restify.createServer({
   log: logger,
 });
 
+server.pre(restify.plugins.pre.context());
+
 server.use(restify.plugins.requestLogger());
 server.use(restify.plugins.acceptParser(server.acceptable));
 server.use(restify.plugins.queryParser());
