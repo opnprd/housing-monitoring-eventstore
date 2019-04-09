@@ -1,0 +1,14 @@
+{
+  "name": "housing-monitor-eventstore",
+  "description": "Event store for the housing monitoring datastore",
+  "version": "0.1.0-0",
+  "dependencies": {
+    "config": "3.1.0",
+    "mongodb": "3.2.3",
+    "restify": "8.2.0"
+  },
+  "scripts": {
+    "start": "node .",
+    "release:dev": "npm --no-git-tag-version version pre"
+  }
+}
