@@ -7,10 +7,13 @@
     "mongodb": "3.2.3",
     "restify": "8.2.0"
   },
+  "devDependencies": {
+    "migrate-mongo": "^5.0.1"
+  },
   "scripts": {
     "start": "node .",
     "release:dev": "npm --no-git-tag-version version pre",
-    "docker:setup": "node admin/dockerSetup",
+    "db:migrate": "migrate-mongo up",
     "test:loaddata": "node test/fixtures/mongodb/setup.js"
   }
 }
