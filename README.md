@@ -17,7 +17,6 @@ Starting the services
 
 To configure the databases and test data, run the following:
 
-    npm run db:migrate
     npm run test:loaddata
 
 To tail the logs for the services, run
