@@ -26,3 +26,11 @@ To tail the logs for the services, run
 
 CTRL+C will stop the logs.
 
+## Documentation
+
+The APIs are documented using the OpenAPI specification (a.k.a. Swagger). There is an API viewer built
+into the service, accessible on the server at the `/docs/api` path. Assuming the service is running
+locally, this is available on `http://localhost:8000/docs/api`. It is possible to use this to interact
+with the api.
+
+The OpenAPI document itself is available at `/docs/api/swagger.json`
