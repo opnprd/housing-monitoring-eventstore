@@ -21,7 +21,9 @@ module.exports = (server) => {
    *         content: 
    *           "application/json":
    *             schema:
-   *               $ref: "#/components/schemas/eventList"
+   *               type: array
+   *               items: 
+   *                 $ref: "#/components/schemas/eventSummary"
    */
   server.get('/events', eventQuery);
   server.head('/events', eventQuery);
@@ -46,7 +48,9 @@ module.exports = (server) => {
    *         content: 
    *           "application/json":
    *             schema:
-   *               $ref: "#/components/schemas/geojsonFeatureCollection"
+   *               type: array
+   *               items: 
+   *                 $ref: "#/components/schemas/eventSummary"
    */
   server.get('/events/geometry', eventQueryGeometry);
   server.head('/events/geometry', eventQueryGeometry);
