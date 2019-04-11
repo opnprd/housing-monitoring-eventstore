@@ -1,8 +1,8 @@
 function eventToFeature(event) {
-  const { urn, type, geometry } = event;
+  const { eventId, type, date, geometry } = event;
   return {
     type: 'Feature',
-    properties: { urn, type },
+    properties: { eventId, type, date },
     geometry,
   };
 }

@@ -7,10 +7,10 @@ async function findEvents(query={}, projection={}) {
   return results;
 }
 
-async function getOneEvent(urn, projection={}) {
+async function getOneEvent(eventId, projection={}) {
   await mongodb.connect();
   const events = mongodb.db().collection('events');
-  const results = await events.findOne({ urn: urn }, { projection: projection });
+  const results = await events.findOne({ eventId: eventId }, { projection: projection });
   return results;
 }
 

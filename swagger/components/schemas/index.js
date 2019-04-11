@@ -14,7 +14,7 @@ module.exports = {
   },
   eventSummary: {
     properties: {
-      urn: {
+      eventId: {
         type: 'string',
         format: 'uuid',
         example: 'a6e60083-338b-4b70-8085-55fa26490bcc',

@@ -1,6 +1,6 @@
 module.exports = [
   {
-    urn: "a6e60083-338b-4b70-8085-55fa26490bcc",
+    eventId: "a6e60083-338b-4b70-8085-55fa26490bcc",
     type: "planningApproval",
     date: new Date("2017-05-01"),
     geometry: {
@@ -40,7 +40,7 @@ module.exports = [
     }
   },
   {
-    urn: "2c47f56e-7042-42e1-8d57-ea4bc3d4e786",
+    eventId: "2c47f56e-7042-42e1-8d57-ea4bc3d4e786",
     type: "councilTaxRegistration",
     date: new Date("2019-02-26"),
     geometry: {

@@ -21,7 +21,7 @@ async function eventsQuery(req, res, next) {
   const events = await findEvents(query, projection);
 
   const sanitiseResults = (x) => {
-    x.href = `./event/${x.urn}`;
+    x.href = `./event/${x.eventId}`;
     return x;
   }
   events.map(sanitiseResults);

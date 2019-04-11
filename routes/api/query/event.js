@@ -5,16 +5,16 @@ module.exports = (server) => {
   /**
    * @swagger
    *
-   * '/event/{urn}':
+   * '/event/{id}':
    *   get:
    *     tags:
    *       - query
    *       - event
-   *     summary: Retrieve individual events by urn
+   *     summary: Retrieve individual events by eventId
    *     description: 
    *     parameters:
    *       - allOf:
-   *         - $ref: "#/components/parameters/urnPath"
+   *         - $ref: "#/components/parameters/idPath"
    *         - example: a6e60083-338b-4b70-8085-55fa26490bcc
    *     responses:
    *       200:
@@ -24,23 +24,23 @@ module.exports = (server) => {
    *             schema:
    *               $ref: "#/components/schemas/eventSummary"
    */
-  server.get('/event/:urn', getEvent);
-  server.head('/event/:urn', getEvent);
+  server.get('/event/:eventId', getEvent);
+  server.head('/event/:eventId', getEvent);
 
   /**
    * @swagger
    *
-   * '/event/{urn}/geometry':
+   * '/event/{id}/geometry':
    *   get:
    *     tags:
    *       - query
    *       - event
    *       - geojson
-   *     summary: Retrieve individual events by urn as a GeoJSON feature
+   *     summary: Retrieve individual events by eventId as a GeoJSON feature
    *     description: 
    *     parameters:
    *       - allOf:
-   *         - $ref: "#/components/parameters/urnPath"
+   *         - $ref: "#/components/parameters/idPath"
    *         - example: a6e60083-338b-4b70-8085-55fa26490bcc
    *     responses:
    *       200:
@@ -50,6 +50,6 @@ module.exports = (server) => {
    *             schema:
    *               $ref: "#/components/schemas/geojsonFeature"
    */
-  server.get('/event/:urn/geometry', getEventGeometry);
-  server.head('/event/:urn/geometry', getEventGeometry);
+  server.get('/event/:eventId/geometry', getEventGeometry);
+  server.head('/event/:eventId/geometry', getEventGeometry);
 };
