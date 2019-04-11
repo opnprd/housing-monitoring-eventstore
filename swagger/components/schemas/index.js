@@ -15,7 +15,9 @@ module.exports = {
   eventSummary: {
     properties: {
       urn: {
-        $ref: '#/components/schemas/urn',
+        type: 'string',
+        format: 'uuid',
+        example: 'a6e60083-338b-4b70-8085-55fa26490bcc',
       },
       type: {
         $ref: '#/components/schemas/eventType',
@@ -36,10 +38,5 @@ module.exports = {
     example: 'planningApproval',
   },
   geojsonFeature, geojsonFeatureCollection, geojsonGeometry, geojsonGeometryString,
-  urn: {
-    type: 'string',
-    format: 'uuid',
-    example: 'a6e60083-338b-4b70-8085-55fa26490bcc',
-  },
 };
   
