@@ -1,6 +1,16 @@
 {
   "name": "housing-monitor-eventstore",
   "description": "Event store for the housing monitoring datastore",
+  "author": "Giles Dring <giles.dring@odileeds.org>",
+  "repository": "github:odileeds/housing-monitoring-eventstore",
+  "homepage": "https://github.com/odileeds/housing-monitoring-eventstore#readme",
+  "bugs": {
+    "url": "https://github.com/odileeds/housing-monitoring-eventstore/issues"
+  },
+  "main": "index.js",
+  "engines": {
+    "node": ">= 10.15.3"
+  },
   "version": "0.1.0-0",
   "dependencies": {
     "bunyan": "1.8.12",
@@ -25,5 +35,17 @@
     "posttest:loaddata": "cross-env MONGO_HOST=localhost npm run db:migrate",
     "test:cleardata": "mongodb-fixtures $npm_package_config_fixtures unload",
     "posttest:cleardata": "cross-env MONGO_HOST=localhost npm run db:migrate"
-  }
+  },
+  "keywords": [
+    "mongo",
+    "geojson",
+    "event",
+    "store",
+    "service",
+    "housing",
+    "query",
+    "node",
+    "javascript"
+  ],
+  "license": "ISC"
 }
