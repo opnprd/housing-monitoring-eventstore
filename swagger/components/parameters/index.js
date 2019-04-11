@@ -17,6 +17,9 @@ module.exports = {
     description: 'urn of the object to retrieve',
     in: 'path',
     required: true,
-    schema: { $ref: "#/components/schemas/urn" },
+    schema: {
+      type: 'string',
+      format: 'uuid',
+    },
   }
 };

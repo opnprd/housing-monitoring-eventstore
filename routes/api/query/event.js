@@ -13,8 +13,9 @@ module.exports = (server) => {
    *     summary: Retrieve individual events by urn
    *     description: 
    *     parameters:
-   *       -  $ref: "#/components/parameters/urnPath"
-   *          example: a6e60083-338b-4b70-8085-55fa26490bcc
+   *       - allOf:
+   *         - $ref: "#/components/parameters/urnPath"
+   *         - example: a6e60083-338b-4b70-8085-55fa26490bcc
    *     responses:
    *       200:
    *         description: Event found
@@ -38,8 +39,9 @@ module.exports = (server) => {
    *     summary: Retrieve individual events by urn as a GeoJSON feature
    *     description: 
    *     parameters:
-   *       -  $ref: "#/components/parameters/urnPath"
-   *          example: a6e60083-338b-4b70-8085-55fa26490bcc
+   *       - allOf:
+   *         - $ref: "#/components/parameters/urnPath"
+   *         - example: a6e60083-338b-4b70-8085-55fa26490bcc
    *     responses:
    *       200:
    *         description: Event found
