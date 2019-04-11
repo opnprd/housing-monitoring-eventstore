@@ -20,12 +20,6 @@ async function eventsQuery(req, res, next) {
   const projection = { _id: 0, ...req.get('event.projection') };
   const events = await findEvents(query, projection);
 
-  const sanitiseResults = (x) => {
-    x.href = `./event/${x.eventId}`;
-    return x;
-  }
-  events.map(sanitiseResults);
-
   req.set('events', events);
 
   return next();
