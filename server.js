@@ -11,6 +11,7 @@ server.pre(restify.plugins.pre.context());
 server.use(restify.plugins.requestLogger());
 server.use(restify.plugins.acceptParser(server.acceptable));
 server.use(restify.plugins.queryParser());
+server.use(restify.plugins.bodyParser());
 server.use(restify.plugins.gzipResponse());
 
 server.on('after', restify.plugins.auditLogger({event: 'after', log: logger}));

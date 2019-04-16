@@ -17,7 +17,7 @@ module.exports = (server) => {
     description: 'Housing Monitoring Event Store', // A short description of the application. (default: '')
     tags: [
       { name: 'query', description: 'Query operations' },
-      { name: 'insert', description: 'Insert operations' },
+      { name: 'update', description: 'Update operations' },
       { name: 'events', description: 'Operations on groups of events' },
       { name: 'event', description: 'Operations on individual event'},
       { name: 'geojson', description: 'Operations that return GeoJSON responses' },
