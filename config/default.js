@@ -18,6 +18,7 @@ module.exports = {
     url: defer(constructMongoString),
     options: {
       useNewUrlParser: true,
+      poolSize: 50,
     },
   },
 };

@@ -1,13 +1,18 @@
 const config = require('config');
 const { MongoClient } = require('mongodb');
 
-// Database Name
-const dbName = 'myproject';
+let client;
 
-// Create a new MongoClient
-const client = new MongoClient(
-  config.get('mongodb.url'),
-  config.get('mongodb.options')
-);
+async function connect() {
+  if ( client === undefined ) {
+    client = await MongoClient.connect(
+      config.get('mongodb.url'),
+      config.get('mongodb.options')
+    );
+  }
+  return client;
+}
 
-module.exports = client;
+module.exports = {
+  connect,
+}
