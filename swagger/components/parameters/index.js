@@ -2,7 +2,7 @@ module.exports = {
   eventTypeQuery: {
     name: 'type',
     in: 'query',
-    description: 'Type of event to return',
+    description: 'Event type return',
     schema: { $ref: '#/components/schemas/eventType' },
   },
   geometryIntersectsQuery: {
@@ -14,12 +14,18 @@ module.exports = {
   },
   idPath: {
     name: 'id',
-    description: 'id of the object to retrieve',
+    description: 'Object id',
     in: 'path',
     required: true,
     schema: {
       type: 'string',
       format: 'uuid',
     },
-  }
+  },
+  refQuery: {
+    name: 'ref',
+    in: 'query',
+    description: 'Event reference from external source',
+    schema: { type: 'string' },
+  },
 };

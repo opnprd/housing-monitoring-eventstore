@@ -4,6 +4,7 @@ const { findEvents } = require('../resources/events');
 
 const keyMap = {
   type: 'type',
+  ref: 'ref',
   intersects: 'geometry',
 };
 

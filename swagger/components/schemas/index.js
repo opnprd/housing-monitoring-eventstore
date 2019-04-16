@@ -6,6 +6,10 @@ const {
 } = require('./geojson');
 
 module.exports = {
+  eventData: {
+    type: 'object',
+    description: 'Unconstrained object containing additional event data. Will vary significanyly per event type.'
+  },
   eventDate: {
     type: 'string',
     format: 'date-time',
@@ -26,8 +30,29 @@ module.exports = {
       date: {
         $ref: '#/components/schemas/eventDate',
         required: true,
+      },
+      ref: {
+        $ref: '#/components/schemas/eventRef',
       }
-    }
+    },
+  },
+  eventRef: {
+    type: 'string',
+    description: 'External reference for the event. This will depend on the source system.',
+  },
+  eventFull: {
+    allOf: [
+      {
+        $ref: '#/components/schemas/eventSummary',
+      },
+      {
+        properties: {
+          eventData: {
+            $ref: '#/components/schemas/eventData',
+          },
+        },
+      },
+    ],
   },
   eventType: {
     type: 'string',
