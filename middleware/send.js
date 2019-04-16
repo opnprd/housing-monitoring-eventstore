@@ -1,6 +1,7 @@
 function send(contextKey) {
   return function sendEvents(req, res, next) {
-    res.send(req.get(contextKey));
+    const response = contextKey ? req.get(contextKey) : undefined;
+    res.send(response);
     return next();
   }
 }
