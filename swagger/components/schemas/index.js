@@ -74,5 +74,15 @@ module.exports = {
     example: 'planningApproval',
   },
   geojsonFeature, geojsonFeatureCollection, geojsonGeometry, geojsonGeometryString,
+  schemeSummary: {
+    type: 'object',
+    properties: {
+      schemeId: {
+        type: 'string',
+        format: 'uuid',
+        required: true,
+      }
+    }
+  },
 };
   

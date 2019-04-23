@@ -22,5 +22,6 @@ async function findSchemesInArea(geometry, projection={}) {
 
 module.exports = {
   createScheme,
+  findSchemes,
   findSchemesInArea,
 }

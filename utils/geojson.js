@@ -7,6 +7,17 @@ function eventToFeature(event) {
   };
 }
 
+function schemeToFeature(scheme) {
+  const { schemeId, geometry} = scheme;
+  return {
+    type: 'Feature',
+    properties: { schemeId },
+    geometry,
+  };
+
+}
+
 module.exports = {
   eventToFeature,
+  schemeToFeature,
 };
