@@ -30,6 +30,12 @@ async function createEvent(eventData) {
   return event;
 }
 
+async function updateEvent(id, data) {
+  const mongoClient = await mongodb.connect();
+  const events = mongoClient.db().collection('events');
+  return events.updateOne({ eventId: id}, { $set: data });
+}
+
 async function updateGeometry(id, geometry) {
   debug(`Updating ${id} geometry`);
   const mongoClient = await mongodb.connect();
@@ -55,5 +61,6 @@ module.exports = {
   createEvent,
   findEvents,
   getOneEvent,
+  updateEvent,
   updateGeometry,
 }
