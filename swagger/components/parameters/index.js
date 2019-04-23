@@ -28,4 +28,10 @@ module.exports = {
     description: 'Event reference from external source',
     schema: { type: 'string' },
   },
+  schemeQuery: {
+    name: 'scheme',
+    in: 'query',
+    description: 'Scheme identifier',
+    schema: { type: 'string' },
+  },
 };

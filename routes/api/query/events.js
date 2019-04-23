@@ -16,6 +16,7 @@ module.exports = (server) => {
    *       - $ref: "#/components/parameters/eventTypeQuery"
    *       - $ref: "#/components/parameters/geometryIntersectsQuery"
    *       - $ref: "#/components/parameters/refQuery"
+   *       - $ref: "#/components/parameters/schemeQuery"
    *     responses:
    *       200:
    *         description: Query performed successfully
@@ -44,6 +45,7 @@ module.exports = (server) => {
    *       - $ref: "#/components/parameters/eventTypeQuery"
    *       - $ref: "#/components/parameters/geometryIntersectsQuery"
    *       - $ref: "#/components/parameters/refQuery"
+   *       - $ref: "#/components/parameters/schemeQuery"
    *     responses:
    *       200:
    *         description: Query performed successfully
