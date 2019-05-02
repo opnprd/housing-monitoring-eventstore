@@ -68,10 +68,10 @@ module.exports = {
   eventType: {
     type: 'string',
     enum: [
-      'planningApproval',
+      'planningPermission',
       'councilTaxRegistration',
     ],
-    example: 'planningApproval',
+    example: 'planningPermission',
   },
   geojsonFeature, geojsonFeatureCollection, geojsonGeometry, geojsonGeometryString,
   schemeSummary: {
