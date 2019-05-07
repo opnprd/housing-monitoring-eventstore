@@ -1,16 +1,20 @@
 const { getOneEvent, updateEvent } = require('../resources/events');
 const { createScheme, findSchemesInArea } = require('../resources/schemes');
 const { InternalServerError } = require('restify-errors');
-
 const debug = require('debug')('eventstore/middleware/matchScheme');
 
 async function matchScheme(req, res, next) {
-  const event = await getOneEvent(req.params.eventId, { eventId: 1, geometry: 1, scheme: 1 });
+  const event = req.get('event');
+  // const event = await getOneEvent(req.params.eventId, { eventId: 1, geometry: 1, scheme: 1 });
+  debug(`Event is ${JSON.stringify(event, null, 2)}`);
+  let schemes = [];
+  let scheme = undefined;
 
-  let schemes;
   if (event.geometry) {
     debug('Searching for scheme by geometry');
     schemes = await findSchemesInArea(event.geometry);
+  } else {
+    return next();
   }
 
   if (schemes.length > 1) {
@@ -25,16 +29,20 @@ async function matchScheme(req, res, next) {
     scheme = schemes[0];
   }
 
-  if (schemes.length === 0) {
+  if (schemes.length === 0 && event.type === 'planningPermission') {
     debug('Creating new scheme');
     scheme = await createScheme({
       geometry: event.geometry,
     });
+    if (scheme === undefined) {
+      return next(new InternalServerError('Problem creating new scheme'));
+    }
     debug(`Created scheme ${scheme.schemeId}`);
   }
 
   if (scheme === undefined) {
-    return next(new InternalServerError('Problem creating new scheme'));
+    debug('No scheme found');
+    return next();
   }
 
   if (event.scheme && (event.scheme === scheme.schemeId)) {

@@ -5,7 +5,7 @@ const mongodb = require('../services/mongo');
 async function createEvent(eventData) {
   const mongoClient = await mongodb.connect();
   const events = mongoClient.db().collection('events');
-  const queryOptions = { projection: { _id: 0, geometry: 0, eventData: 0 } };
+  const queryOptions = { projection: { _id: 0, eventData: 0 } };
 
   eventData.date = eventData.date ? new Date(eventData.date) : null;
 
