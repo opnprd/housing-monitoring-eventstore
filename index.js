@@ -7,6 +7,7 @@ const querySchemes = require('./routes/api/query/schemes');
 const queryEvent = require('./routes/api/query/event');
 const updateEvents = require('./routes/api/update/events');
 const updateEvent = require('./routes/api/update/event');
+const reportSchemes = require('./routes/api/reports');
 const swagger = require('./swagger');
 
 queryEvents(server);
@@ -14,6 +15,7 @@ queryEvent(server);
 querySchemes(server);
 updateEvents(server);
 updateEvent(server);
+reportSchemes(server);
 swagger(server);
 
 server.listen(config.get('server.port'), function() {
