@@ -11,7 +11,6 @@ module.exports = (server) => {
    *       - query
    *       - events
    *     summary: Retrieve lists of events from the event store 
-   *     description: 
    *     parameters:
    *       - $ref: "#/components/parameters/eventTypeQuery"
    *       - $ref: "#/components/parameters/geometryIntersectsQuery"
@@ -40,7 +39,6 @@ module.exports = (server) => {
    *       - events
    *       - geojson
    *     summary: Retrieve FeatureCollection of events from the event store 
-   *     description:
    *     parameters:
    *       - $ref: "#/components/parameters/eventTypeQuery"
    *       - $ref: "#/components/parameters/geometryIntersectsQuery"

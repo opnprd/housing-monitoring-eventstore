@@ -11,11 +11,8 @@ module.exports = (server) => {
    *       - query
    *       - event
    *     summary: Retrieve individual events by eventId
-   *     description: 
    *     parameters:
-   *       - allOf:
-   *         - $ref: "#/components/parameters/idPath"
-   *         - example: a6e60083-338b-4b70-8085-55fa26490bcc
+   *       - $ref: "#/components/parameters/idPath"
    *     responses:
    *       200:
    *         description: Event found
@@ -37,11 +34,8 @@ module.exports = (server) => {
    *       - event
    *       - geojson
    *     summary: Retrieve individual events by eventId as a GeoJSON feature
-   *     description: 
    *     parameters:
-   *       - allOf:
-   *         - $ref: "#/components/parameters/idPath"
-   *         - example: a6e60083-338b-4b70-8085-55fa26490bcc
+   *       - $ref: "#/components/parameters/idPath"
    *     responses:
    *       200:
    *         description: Event found

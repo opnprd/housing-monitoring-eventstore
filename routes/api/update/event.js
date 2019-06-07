@@ -11,7 +11,6 @@ module.exports = (server) => {
    *       - event
    *       - geojson
    *     summary: Replace the geometry for an individual event
-   *     description: 
    *     parameters: 
    *      - $ref: "#/components/parameters/idPath"
    *     requestBody:
@@ -24,9 +23,7 @@ module.exports = (server) => {
    *       204:
    *         description: Update accepted
    *       500:
-   *         allOf:
-   *          - description: Internal server error
-   *          - $ref: "#/components/responses/errorResponse"
+   *         $ref: "#/components/responses/errorResponse"
    */
   server.put('/event/:eventId/geometry', setEventGeometry);
 };

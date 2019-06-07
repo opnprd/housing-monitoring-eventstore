@@ -10,13 +10,13 @@ module.exports = (server) => {
    *       - report
    *       - schemes
    *     summary: Retrieve summary of all schemes
-   *     description: 
    *     responses:
    *       200:
    *         description: Events report
    *         content: 
    *           "application/json":
-   *             schema: []
+   *             schema:
+   *               type: array
    */
   server.get('/reports/schemes', schemeReport);
   server.head('/reports/schemes', schemeReport);

@@ -1,5 +1,6 @@
 module.exports = {
   errorResponse: {
+    description: 'Standard error response',
     content: {
       'application/json': {
         schema: {

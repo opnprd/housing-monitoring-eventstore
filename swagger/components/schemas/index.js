@@ -10,16 +10,15 @@ module.exports = {
     properties: {
       type: {
         $ref: '#/components/schemas/eventType',
-        required: true,
       },
       date: {
         $ref: '#/components/schemas/eventDate',
-        required: true,
       },
       ref: {
         $ref: '#/components/schemas/eventRef',
       },  
     },
+    required: [ 'type', 'date']
   },
   eventData: {
     type: 'object',
@@ -80,9 +79,9 @@ module.exports = {
       schemeId: {
         type: 'string',
         format: 'uuid',
-        required: true,
       }
-    }
+    },
+    required: [ 'schemeId' ],
   },
 };
   

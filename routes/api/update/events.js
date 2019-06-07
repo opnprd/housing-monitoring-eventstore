@@ -10,7 +10,6 @@ module.exports = (server) => {
    *       - update
    *       - events
    *     summary: Add event to the event store.
-   *     description: 
    *     parameters: []
    *     requestBody:
    *       content:

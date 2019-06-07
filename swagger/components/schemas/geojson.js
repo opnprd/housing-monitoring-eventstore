@@ -6,11 +6,15 @@ module.exports = {
     $ref: 'http://geojson.org/schema/FeatureCollection.json',
   },
   geojsonGeometry: {
-    $ref: 'http://geojson.org/schema/Geometry.json',
-    example: {
-      type: 'Polygon',
-      coordinates: [[[-1.53905, 53.79726], [-1.53709, 53.79726], [-1.53709, 53.79804], [-1.53905, 53.79804], [-1.53905, 53.79726]]],
-    }
+    allOf: [
+      { $ref: 'http://geojson.org/schema/Geometry.json' },
+      {
+        example: {
+          type: 'Polygon',
+          coordinates: [[[-1.53905, 53.79726], [-1.53709, 53.79726], [-1.53709, 53.79804], [-1.53905, 53.79804], [-1.53905, 53.79726]]],
+        }    
+      }
+    ]
   },
   geojsonGeometryString: {
     type: 'string',

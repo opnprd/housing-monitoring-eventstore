@@ -11,7 +11,6 @@ module.exports = (server) => {
    *       - query
    *       - schemes
    *     summary: Retrieve lists of schemes from the event store 
-   *     description: 
    *     parameters:
    *       - $ref: "#/components/parameters/geometryIntersectsQuery"
    *     responses:
@@ -37,7 +36,6 @@ module.exports = (server) => {
    *       - schemes
    *       - geojson
    *     summary: Retrieve FeatureCollection of schemes from the event store 
-   *     description:
    *     parameters:
    *       - $ref: "#/components/parameters/geometryIntersectsQuery"
    *     responses:
