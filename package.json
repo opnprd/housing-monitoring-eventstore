@@ -19,7 +19,7 @@
     "mongodb": "3.2.3",
     "restify": "8.2.0",
     "restify-cors-middleware": "^1.1.1",
-    "restify-swagger-jsdoc-openapi3": "1.0.0"
+    "restify-swagger-jsdoc-openapi3": "git+https://github.com/dringtech/restify-swagger-jsdoc-openapi3.git#fix/openapi3-spec-servers"
   },
   "devDependencies": {
     "cross-env": "^5.2.0",
