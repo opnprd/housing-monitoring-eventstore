@@ -32,11 +32,7 @@
   "scripts": {
     "start": "node .",
     "release:dev": "npm version pre",
-    "db:migrate": "migrate-mongo up",
-    "test:loaddata": "mongodb-fixtures $npm_package_config_fixtures rebuild",
-    "posttest:loaddata": "cross-env MONGO_HOST=localhost npm run db:migrate",
-    "test:cleardata": "mongodb-fixtures $npm_package_config_fixtures unload",
-    "posttest:cleardata": "cross-env MONGO_HOST=localhost npm run db:migrate"
+    "db:migrate": "migrate-mongo up"
   },
   "keywords": [
     "mongo",

@@ -15,9 +15,9 @@ Starting the services
 
     docker-compose up --build --detach
 
-To configure the databases and test data, run the following:
+To configure the databases, run the following:
 
-    npm run test:loaddata
+    npm run db:migrate
 
 To tail the logs for the services, run
 
