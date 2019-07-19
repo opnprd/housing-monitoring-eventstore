@@ -1,5 +1,7 @@
 # housing-monitor-eventstore
 
+> This eventstore is part of a prototype toolset that has been developed by the team at [ODI Leeds](https://odileeds.org/) in collaboration with the [Connected Places Catapult](https://futurecities.catapult.org.uk/).
+
 ## Pre-requisites
 
 You'll need
